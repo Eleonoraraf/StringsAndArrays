@@ -10,9 +10,9 @@ public class StatsService {
     }
 
     public double statisticSaleAverageMonth(int[] sale) {
-        int numberSale = sale.length;
-        double sum = statisticSaleSum (sale);
-        double averageMonth = sum / numberSale;
+        long numberSale = sale.length;
+        long sum = statisticSaleSum (sale);
+        long averageMonth = sum / numberSale;
         return averageMonth;
     }
 
@@ -39,7 +39,7 @@ public class StatsService {
     }
 
     public int statisticMonthUnderAverage(int[] sale) {
-        int averageSum = (int) statisticSaleAverageMonth(sale);
+        long averageSum = (long) statisticSaleAverageMonth(sale);
         int numberUnderAverage = 0;
 
         // Запускаем цикл от 0 до длины массива sale
@@ -53,7 +53,7 @@ public class StatsService {
     }
 
     public int statisticMonthOverAverage(int[] sale) {
-        int averageSum = (int) statisticSaleAverageMonth(sale);
+        long averageSum = (long) statisticSaleAverageMonth(sale);
         int numberOverAverage = 0;
 
         // Запускаем цикл от 0 до длины массива sale

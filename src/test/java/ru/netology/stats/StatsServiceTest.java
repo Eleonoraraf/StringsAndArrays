@@ -12,7 +12,7 @@ public class StatsServiceTest {
         int[] sale = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         // Вызываем метод
-        int actual = (int) service.statisticSaleSum(sale);
+        long actual = (int) service.statisticSaleSum(sale);
 
         // Задаём контрольное значение
         long expected = 180;
@@ -26,10 +26,10 @@ public class StatsServiceTest {
         int[] sale = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         // Вызываем метод
-        double actual = (double) service.statisticSaleAverageMonth(sale);
+        long actual = (int) service.statisticSaleAverageMonth(sale);
 
         // Задаём контрольное значение
-        double expected = 15;
+        long expected = 15;
         Assertions.assertEquals(expected, actual);
     }
 
@@ -40,7 +40,7 @@ public class StatsServiceTest {
         int[] sale = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         // Вызываем метод
-        int actual = (int) service.statisticSaleMax(sale);
+        long actual = (int) service.statisticSaleMax(sale);
 
         // Задаём контрольное значение
         long expected = 8;
@@ -54,7 +54,7 @@ public class StatsServiceTest {
         int[] sale = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         // Вызываем метод
-        int actual = (int) service.statisticSaleMin(sale);
+        long actual = (int) service.statisticSaleMin(sale);
 
         // Задаём контрольное значение
         long expected = 9;
@@ -67,7 +67,7 @@ public class StatsServiceTest {
         int[] sale = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         // Вызываем метод
-        int actual = (int) service.statisticMonthUnderAverage(sale);
+        long actual = (long) service.statisticMonthUnderAverage(sale);
 
         // Задаём контрольное значение
         long expected = 5;
@@ -80,7 +80,7 @@ public class StatsServiceTest {
         int[] sale = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         // Вызываем метод
-        int actual = (int) service.statisticMonthOverAverage(sale);
+        long actual = (long) service.statisticMonthOverAverage(sale);
 
         // Задаём контрольное значение
         long expected = 5;
